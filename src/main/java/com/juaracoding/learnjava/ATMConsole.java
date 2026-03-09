@@ -50,17 +50,30 @@ public class ATMConsole {
     }
 
     static boolean login() {
-        int pinBenar = 123456; 
-        System.out.print("Masukkan PIN Anda: ");
-        int pinInput = scanner.nextInt();
-        
-        if (pinInput == pinBenar) {
-            System.out.println("Login Berhasil!");
-            return true;
-        } else {
-            System.out.println("PIN Salah!");
-            return false;
+       int pinBenar = 123456; 
+        int percobaan = 0;
+        int batasMaksimal = 3;
+
+        while (percobaan < batasMaksimal) {
+            System.out.print("Masukkan PIN Anda: ");
+            int pinInput = scanner.nextInt();
+            
+            if (pinInput == pinBenar) {
+                System.out.println("Login Berhasil!");
+                return true;
+            } else {
+                percobaan++;
+                int sisaPercobaan = batasMaksimal - percobaan;
+                
+                if (sisaPercobaan > 0) {
+                    System.out.println("PIN Salah! Anda memiliki " + sisaPercobaan + " kesempatan lagi.\n");
+                } else {
+                    System.out.println("PIN Salah! Akun Anda diblokir karena terlalu banyak percobaan gagal.");
+                }
+            }
         }
+        
+        return false;
     }
 
     static void cekSaldo() {

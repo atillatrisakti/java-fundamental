@@ -72,9 +72,9 @@ public class ATMConsole {
         double jumlahSetor = scanner.nextDouble();
         
         if (jumlahSetor > 0) {
-            saldo += jumlahSetor; // Menambahkan saldo
+            saldo += jumlahSetor; 
             System.out.println("Setor tunai berhasil.");
-            cekSaldo(); // Tampilkan saldo terbaru
+            cekSaldo(); 
         } else {
             System.out.println("Nominal harus lebih dari 0.");
         }

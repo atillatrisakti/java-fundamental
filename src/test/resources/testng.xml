@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="OOPTest">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <!-- <class name="com.juaracoding.learnjava.oop.AuthTest"/>
+      <class name="com.juaracoding.learnjava.oop.KaryawanTest"/> -->
+      <class name="com.juaracoding.learnjava.ujian2.HRTest"/>
+      <!-- <class name="com.juaracoding.learnjava.oop.CalculatorTest"/> -->
+    </classes>
+  </test>
+</suite>
